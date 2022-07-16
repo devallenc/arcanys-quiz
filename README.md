@@ -33,11 +33,13 @@ payload: {"email":"", "password":""}
 API Response will contain a token. And always attach it to "Authorization" Header to be able to make a request on the quiz api.
 
 
-URL: localhost8081/api/quizzes/
+
 4. LIST OF QUIZ - HTTP METHOD: GET
 5. ADD QUIZ - HTTP METHOD: POST
 URL: localhost8081/api/quizzes/
-Sample Payload
+
+# Sample Payload
+
 {
     "title": "quiz title",
     "questions": [
