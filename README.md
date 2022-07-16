@@ -18,7 +18,7 @@ payload: { "email": "", password: "" }
 
 After you sign up, it will respond a url email. That email contains an href link to verify account, and you can also call it in postman.
 
-2. HTTPMETHOD: GET
+2. HTTP METHOD: GET
 Just in case: URL: localhost:8081/expose-api/verify/:accountId/:verification_Code
 
 If something's not working on the email, just generate an account on https://ethereal.email/, and update ACCOUNT_EMAIL and ACCOUNT_PASSWORD in .env file
@@ -34,9 +34,9 @@ API Response will contain a token. And always attach it to "Authorization" Heade
 
 
 
+URL: localhost8081/api/quizzes/
 4. LIST OF QUIZ - HTTP METHOD: GET
 5. ADD QUIZ - HTTP METHOD: POST
-URL: localhost8081/api/quizzes/
 
 # Sample Payload
 
