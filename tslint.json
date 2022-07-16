@@ -1,0 +1,20 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+      "tslint:recommended"
+  ],
+  "jsRules": {},
+  "rules": {
+      "no-console": false,
+      "radix": false,
+      "class-name": false,
+      "forin": false,
+      "jsdoc-format": false,
+      "no-unused-expression": true,
+      "no-trailing-whitespace": false,
+      "only-arrow-functions": false,
+      "adjacent-overload-signatures": false,
+      "no-string-throw": false
+  },
+  "rulesDirectory": []
+}

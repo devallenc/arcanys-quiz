@@ -1,0 +1,34 @@
+version: '3.4'
+
+services:
+  mysqldb:
+    container_name: mysqldb
+    image: mysql:5.7
+    env_file: .env
+    environment:
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+    ports:
+      - $MYSQLDB_LOCAL_PORT:$MYSQLDB_DOCKER_PORT
+    volumes:
+      - db:/var/lib/mysql
+
+  quiz-app:
+    container_name: quiz-app
+    build: .
+    volumes:
+      - ./dist:/usr/src/app/dist
+    depends_on:
+      - mysqldb
+    env_file: .env
+    ports:
+      - '8081:3000'
+    environment:
+      - DB_HOST=mysqldb
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
+
+volumes: 
+  db:
