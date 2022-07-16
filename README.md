@@ -1,40 +1,40 @@
 # arcanys-quiz
 
+## Istall Docker
 Docker is required to be installed in your current machine.
-
+```bash
+docker-compose up -d
+```
 Type "docker-compose up -d" to run the project and wait for docker to install and run things in the background.
 And type "docker-compose down" to shutdown the running docker container.
 
 Use postman to test the API.
 
-Available Endpoints:
+## Available Endpoints:
 
-1.
-HTTP METHOD: POST
+1. HTTP METHOD: POST
 URL: localhost:8081/expose-api/sign-up
 payload: { "email": "", password: "" }
 
 
 After you sign up, it will respond a url email. That email contains an href link to verify account, and you can also call it in postman.
 
-2.
-HTTP METHOD: POST
+2. HTTPMETHOD: POST
 Just in case: URL: localhost:8081/expose-api/verify/:accountId/:verification_Code
 
 After verifying, you may now sign in
 
-3.
-HTTP METHOD: POST
+3. HTTP METHOD: POST
 URL: localhost:8081/expose-api/sign-in
 payload: {"email":"", "password":""}
 
 API Response will contain a token. And always attach it to "Authorization" Header to be able to make a request on the quiz api.
 
-4. GET QUIZZES LIST
-HTTP METHOD: GET
-URL: localhost8081/api/quizzes/
 
-5. ADD QUIZ
+URL: localhost8081/api/quizzes/
+4. LIST OF QUIZ - HTTP METHOD: GET
+5. ADD QUIZ - HTTP METHOD: POST
+URL: localhost8081/api/quizzes/
 Sample Payload
 {
     "title": "quiz title",
