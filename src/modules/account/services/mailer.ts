@@ -14,14 +14,14 @@ export default class MailerService {
       secure: false,
       requireTLS: true,
       auth: {
-        user: "maximilian.quitzon@ethereal.email",
-        pass: "ZCt7jbnPqspxTSWAYn",
+        user: process.env.ACCOUNT_EMAIL || "maximilian.quitzon@ethereal.email",
+        pass: process.env.ACCOUNT_PASSWORD || "ZCt7jbnPqspxTSWAYn",
       },
       logger: true
     });
 
     let info = await transporter.sendMail({
-      from: '"Fred Foo 👻" <foo@example.com>', // sender address
+      from: 'Quiz App <foo@example.com>', // sender address
       to: account.email, // list of receivers
       subject: "Quiz App - Account Validation", // Subject line
       // text_display: "Hello world?", // plain text_display body

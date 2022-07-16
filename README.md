@@ -16,11 +16,13 @@ Use postman to test the API.
 URL: localhost:8081/expose-api/sign-up
 payload: { "email": "", password: "" }
 
-
 After you sign up, it will respond a url email. That email contains an href link to verify account, and you can also call it in postman.
 
-2. HTTPMETHOD: POST
+2. HTTPMETHOD: GET
 Just in case: URL: localhost:8081/expose-api/verify/:accountId/:verification_Code
+
+If something's not working on the email, just generate an account on https://ethereal.email/, and update ACCOUNT_EMAIL and ACCOUNT_PASSWORD in .env file
+
 
 After verifying, you may now sign in
 
