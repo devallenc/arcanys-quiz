@@ -34,10 +34,12 @@ API Response will contain a token. And always attach it to "Authorization" Heade
 
 
 
-URL: localhost8081/api/quizzes/
-4. LIST OF QUIZ - HTTP METHOD: GET
-5. ADD QUIZ - HTTP METHOD: POST
 
+4. LIST OF QUIZ - HTTP METHOD: GET
+URL: localhost8081/api/quizzes/
+
+5. ADD QUIZ - HTTP METHOD: POST
+URL: localhost8081/api/quizzes/
 # Sample Payload
 
 {
